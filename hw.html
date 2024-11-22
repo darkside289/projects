@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUI Homework</title>
+    <style type="text/css">
+        *{
+    margin: 20;
+    padding: 56;
+    box-sizing: border-box;
+    font-family: 'Rockwell Condensed';
+ }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    min-height: 50vh;
+    background: burlywood;
+}
+.box form
+{
+    margin-top: 6%;
+    position: relative;
+    width: 380px;
+    height: 480px;
+    background-image: url(wondering\ in\ the\ sky.jpeg);
+    border-radius: 8px;
+    background-position: 0%;
+    overflow: hidden;
+    border: none;
+    border-radius: 10%;
+    box-sizing: border-box;
+    box-shadow: 0cap;
+}
+.box form h2{
+    color: black;
+    padding-top: 3%;
+    padding-left: 30%;
+    padding-right: 40%;
+}
+.box form input{
+    margin-left: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: burlywood;
+    border-color: black;
+    margin-bottom: 5%;
+    shape-margin: 20%;
+    border: 0cap;
+    box-shadow: black;
+    border-radius: 12%;
+    border-spacing: 5%;
+}
+.submit button{
+    margin-left:15%;
+    background-color: burlywood;
+    border: none;
+}
+.links a{
+    margin-left:15%;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+         <form id="form">
+            <h2>Register</h2>
+            <div class="inputBox">
+                <input type="text" required="required" id="fname">
+                <span>First Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" id="mname">
+                <span>Middle Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" id="lname">
+                <span>Last Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required" id="email">
+                <span>E-mail</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" id="pword">
+                <span>Password</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" id="year">
+                <span>Birth year</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required" id="idno">
+                <span>ID number</span>
+            </div>
+            <div class="links">
+                <a href="https:/mail.google.com">Forgot Password</a>
+                <a href="https:/google.com">Signup</a>
+                <a href="./more.html">Details</a>
+            </div>
+            <div class add>
+                <input type="button" id="btna" value="Add" onclick="AddRow()">           
+            </div>
+        </form>
+    </div>
+        
+        <table border="4" id="show">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>E-mail</th>
+                    <th>Password</th>
+                    <th>Birth Year</th>
+                    <th>ID number</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </center>
+
+    <script>
+        function AddRow() {
+            var table = document.getElementById("show");
+            var row = table.insertRow(-1);
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            var cell7 = row.insertCell(6);
+
+            cell1.innerHTML = document.getElementById("fname").value;
+            cell2.innerHTML = document.getElementById("mname").value;
+            cell3.innerHTML = document.getElementById("lname").value;
+            cell4.innerHTML = document.getElementById("email").value;
+            cell5.innerHTML = document.getElementById("pword").value;
+            cell6.innerHTML = document.getElementById("year").value;
+            cell7.innerHTML = document.getElementById("idno").value;
+
+            // Clear input fields
+            document.getElementById("fname").value = "";
+            document.getElementById("mname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("pword").value = "";
+            document.getElementById("year").value = "";
+            document.getElementById("idno").value = "";
+        }
+    </script>
+</body>
+</html>
